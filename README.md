@@ -2,6 +2,17 @@
 
 Modular framework for building and scaling web scraping workloads over [CLI](https://github.com/swipefintech/scrapist/blob/master/sample/cli.ts), [HTTP](https://github.com/swipefintech/scrapist/blob/master/sample/web.ts) & [WebSockets](https://github.com/swipefintech/scrapist/blob/master/sample/ws.ts).
 
+## Installation
+
+To install this in your project, make sure you have [Node.js](https://nodejs.dev/) installed on your workstation and run below command:
+
+```shell
+yarn add scrapist
+
+# or if using yarn
+npm install scrapist --save
+```
+
 ## Usage
 
 First you need to implement your scraping jobs (commands) classes.
@@ -92,7 +103,7 @@ import YourModule from './YourModule'
 
 const engine = new Engine()
 
-// eithe register commands
+// either register commands
 engine.register('YourCommand1', new YourCommand1())
 engine.register('YourCommand2', new YourCommand2())
 
@@ -169,7 +180,7 @@ curl http://localhost:3000/ExampleDotCom/GetHomePageLinkUsingBrowser \
 
 curl http://localhost:3000/ExampleDotCom/GetHomePageLinkUsingHttpClient \
   -H "Content-Type: application/json" \
-  -d '{"referer":"https://example.com/"}'
+  -d '{"referer": "https://example.com/"}'
 ```
 
 ### WebSockets

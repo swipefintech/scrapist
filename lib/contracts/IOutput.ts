@@ -6,7 +6,7 @@ export enum Status {
 }
 
 export default interface IOutput {
-  data?: any;
+  data?: unknown;
   status: Status;
   message?: string;
 }

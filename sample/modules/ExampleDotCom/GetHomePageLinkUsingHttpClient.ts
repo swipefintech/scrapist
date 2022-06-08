@@ -2,10 +2,8 @@ import cheerio from 'cheerio'
 import Joi, { PartialSchemaMap } from 'joi'
 import IInput from '../../../lib/contracts/IInput'
 import IOutput, { Status } from '../../../lib/contracts/IOutput'
-import ScrapeUsingHttpClientCommand, { HttpClient } from '../../../lib/core/commands/ScrapeUsingHttpClientCommand'
-import StoreCookies from '../../../lib/decorators/StoreCookies'
+import ScrapeUsingHttpClientCommand, { HttpClient } from '../../../lib/commands/ScrapeUsingHttpClientCommand'
 
-@StoreCookies('session')
 export default class GetHomePageLinkUsingHttpClient extends ScrapeUsingHttpClientCommand {
   async handle (input: IInput, client: HttpClient): Promise<IOutput> {
     const { body } = await this.sendRequest(client, {

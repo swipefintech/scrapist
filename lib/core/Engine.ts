@@ -4,7 +4,7 @@ import IEngine from '../contracts/IEngine'
 import IInput from '../contracts/IInput'
 import IModule from '../contracts/IModule'
 import IOutput, { Status } from '../contracts/IOutput'
-import ScrapeCommand from './commands/ScrapeCommand'
+import ScrapeCommand from '../commands/ScrapeCommand'
 
 type CommandsCollection = { id: string, command: ICommand }[];
 

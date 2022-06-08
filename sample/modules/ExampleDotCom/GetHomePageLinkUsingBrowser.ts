@@ -1,7 +1,7 @@
 import { Browser, Page } from 'puppeteer'
 import IInput from '../../../lib/contracts/IInput'
 import IOutput, { Status } from '../../../lib/contracts/IOutput'
-import ScrapeUsingBrowserCommand from '../../../lib/core/commands/ScrapeUsingBrowserCommand'
+import ScrapeUsingBrowserCommand from '../../../lib/commands/ScrapeUsingBrowserCommand'
 import StoreCookies from '../../../lib/decorators/StoreCookies'
 
 @StoreCookies('session')

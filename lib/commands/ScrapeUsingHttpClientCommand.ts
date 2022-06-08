@@ -1,7 +1,7 @@
 import request, { CookieJar, Request, RequestAPI, CoreOptions, RequiredUriUrl, Response } from 'request'
 import { MemoryCookieStore } from 'tough-cookie'
-import IInput from '../../contracts/IInput'
-import IOutput from '../../contracts/IOutput'
+import IInput from '../contracts/IInput'
+import IOutput from '../contracts/IOutput'
 import ScrapeCommand from './ScrapeCommand'
 
 export type HttpClient = RequestAPI<Request, CoreOptions, RequiredUriUrl>;

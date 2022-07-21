@@ -1,7 +1,14 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "target": "ES5"
-  }
+    "forceConsistentCasingInFileNames": true,
+    "module": "commonjs",
+    "outDir": "dist/",
+    "target": "es5"
+  },
+  "exclude": [
+    "sample"
+  ]
 }

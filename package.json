@@ -35,18 +35,29 @@
     "uuid": "^8.3.2",
     "ws": "^8.7.0"
   },
+  "files": [
+    "dist/",
+    "lib/"
+  ],
   "lint-staged": {
     "*.{js,ts}": [
       "eslint"
     ]
   },
-  "name": "scrapist",
+  "main": "dist/index.js",
+  "name": "@swipefintech/scrapist",
   "description": "Modular framework for building and scaling web scraping workloads over CLI, HTTP & WebSockets.",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swipefintech/scrapist.git"
+  },
   "scripts": {
+    "build": "tsc",
     "postinstall": "husky install",
     "start:cli": "node -r ts-node/register sample/cli.ts",
     "start:web": "node -r ts-node/register sample/web.ts",
     "start:ws": "node -r ts-node/register sample/ws.ts"
-  }
+  },
+  "typings": "dist/index.d.ts"
 }

@@ -53,7 +53,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "start:cli": "node -r ts-node/register sample/cli.ts",
     "start:web": "node -r ts-node/register sample/web.ts",
     "start:ws": "node -r ts-node/register sample/ws.ts"

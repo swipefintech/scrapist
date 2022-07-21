@@ -59,5 +59,6 @@
     "start:web": "node -r ts-node/register sample/web.ts",
     "start:ws": "node -r ts-node/register sample/ws.ts"
   },
-  "typings": "dist/index.d.ts"
+  "typings": "dist/index.d.ts",
+  "version": "1.0.0"
 }

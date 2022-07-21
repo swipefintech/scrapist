@@ -22,9 +22,7 @@ First you need to implement your scraping jobs (commands) classes.
 You should extend either `ScrapeUsingBrowserCommand` class or `ScrapeUsingHttpClientCommand` to create your jobs as below.
 
 ```ts
-import IInput from '@swipefintech/scrapist/contracts/IInput'
-import IOutput, { Status } from '@swipefintech/scrapist/contracts/IOutput'
-import ScrapeUsingHttpClientCommand, { HttpClient } from '@swipefintech/scrapist/commands/ScrapeUsingHttpClientCommand'
+import { IInput, IOutput, Status, ScrapeUsingHttpClientCommand, HttpClient } from '@swipefintech/scrapist'
 
 export default class YourCommand extends ScrapeUsingHttpClientCommand {
 
@@ -44,7 +42,7 @@ You can persist session data i.e., cookies between commands automatically by usi
 The `key` that you specify in the decorator is the key name in your input whose value has to be used as a unique identifier to load/save data.
 
 ```ts
-import StoreCookies from '@swipefintech/scrapist/decorators/StoreCookies'
+import { StoreCookies } from '@swipefintech/scrapist'
 
 @StoreCookies("accountId")
 export default class YourCommand extends ScrapeUsingHttpClientCommand {
@@ -56,7 +54,7 @@ You can also validate data present in your input, powered by [Joi](https://joi.d
 
 ```ts
 import Joi, { PartialSchemaMap } from 'joi'
-import ScrapeUsingHttpClientCommand from '@swipefintech/scrapist/commands/ScrapeUsingHttpClientCommand'
+import { ScrapeUsingHttpClientCommand } from '@swipefintech/scrapist'
 
 export default class YourCommand extends ScrapeUsingHttpClientCommand {
 
@@ -73,8 +71,7 @@ export default class YourCommand extends ScrapeUsingHttpClientCommand {
 For bigger projects, it is advised to organise commands into modules like below:
 
 ```ts
-import IEngine from '@swipefintech/scrapist/contracts/IEngine'
-import IModule from '@swipefintech/scrapist/contracts/IModule'
+import { IEngine, IModule } from '@swipefintech/scrapist'
 import YourCommandNo1 from './YourCommandNo1'
 import YourCommandNo2 from './YourCommandNo2'
 
@@ -94,9 +91,7 @@ Now that you have defined your commands, you need to create an instance of `Engi
 (or mount modules) and handle the input.
 
 ```ts
-import IInput from '@swipefintech/scrapist/contracts/IInput'
-import IOutput from '@swipefintech/scrapist/contracts/IOutput'
-import Engine from '@swipefintech/scrapist/core/Engine'
+import { Engine, IInput, IOutput } from '@swipefintech/scrapist'
 import YourCommand1 from './YourCommand1'
 import YourCommand2 from './YourCommand2'
 import YourModule from './YourModule'
@@ -130,7 +125,7 @@ If you are using the `@StoreCookies(<unique-key>)` decorator, you also need to p
 import path from 'path'
 import { caching } from 'cache-manager'
 import store from 'cache-manager-fs-hash'
-import Engine from '@swipefintech/scrapist/core/Engine'
+import { Engine } from '@swipefintech/scrapist'
 
 // create a file-system (or any other)
 const cache = caching({

@@ -1,14 +1,14 @@
 import { Cache } from 'cache-manager'
-import ICommand from '../contracts/ICommand'
-import IEngine from '../contracts/IEngine'
-import IInput from '../contracts/IInput'
-import IModule from '../contracts/IModule'
-import IOutput, { Status } from '../contracts/IOutput'
-import ScrapeCommand from '../commands/ScrapeCommand'
+import { ICommand } from '../contracts/ICommand'
+import { IEngine } from '../contracts/IEngine'
+import { IInput } from '../contracts/IInput'
+import { IModule } from '../contracts/IModule'
+import { IOutput, Status } from '../contracts/IOutput'
+import { ScrapeCommand } from '../commands/ScrapeCommand'
 
 type CommandsCollection = { id: string, command: ICommand }[];
 
-export default class Engine implements IEngine {
+export class Engine implements IEngine {
   private commands: CommandsCollection = []
   private modules: string[] = []
 

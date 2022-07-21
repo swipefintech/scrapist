@@ -5,13 +5,13 @@ import puppeteer, {
   LaunchOptions,
   Page
 } from 'puppeteer'
-import IInput from '../contracts/IInput'
-import IOutput from '../contracts/IOutput'
-import ScrapeCommand from './ScrapeCommand'
+import { IInput } from '../contracts/IInput'
+import { IOutput } from '../contracts/IOutput'
+import { ScrapeCommand } from './ScrapeCommand'
 
 export type BrowserOptions = LaunchOptions & BrowserLaunchArgumentOptions & BrowserConnectOptions;
 
-export default abstract class ScrapeUsingBrowserCommand extends ScrapeCommand {
+export abstract class ScrapeUsingBrowserCommand extends ScrapeCommand {
   get browserOptions (): BrowserOptions {
     return {}
   }

@@ -1,7 +1,7 @@
-import IInput from './IInput'
-import IOutput from './IOutput'
+import { IInput } from './IInput'
+import { IOutput } from './IOutput'
 
-export default interface ICommand {
+export interface ICommand {
 
   process(input: IInput): Promise<IOutput>;
 

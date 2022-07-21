@@ -1,4 +1,4 @@
-import IInput from '../contracts/IInput'
+import { IInput } from '../contracts/IInput'
 
 export function parseMessage (message: string): IInput {
   const { command, ...data } = JSON.parse(message)

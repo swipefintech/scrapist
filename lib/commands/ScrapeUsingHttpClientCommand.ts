@@ -1,8 +1,8 @@
 import request, { CookieJar, Request, RequestAPI, CoreOptions, RequiredUriUrl, Response } from 'request'
 import { MemoryCookieStore } from 'tough-cookie'
-import IInput from '../contracts/IInput'
-import IOutput from '../contracts/IOutput'
-import ScrapeCommand from './ScrapeCommand'
+import { IInput } from '../contracts/IInput'
+import { IOutput } from '../contracts/IOutput'
+import { ScrapeCommand } from './ScrapeCommand'
 
 export type HttpClient = RequestAPI<Request, CoreOptions, RequiredUriUrl>;
 
@@ -11,7 +11,7 @@ export type HttpResponse = {
   body: unknown;
 };
 
-export default abstract class ScrapeUsingHttpClientCommand extends ScrapeCommand {
+export abstract class ScrapeUsingHttpClientCommand extends ScrapeCommand {
   createClient (jar: CookieJar | boolean): HttpClient {
     return request.defaults({ jar })
   }

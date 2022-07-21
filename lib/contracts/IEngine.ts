@@ -1,9 +1,9 @@
-import ICommand from './ICommand'
-import IInput from './IInput'
-import IModule from './IModule'
-import IOutput from './IOutput'
+import { ICommand } from './ICommand'
+import { IInput } from './IInput'
+import { IModule } from './IModule'
+import { IOutput } from './IOutput'
 
-export default interface IEngine {
+export interface IEngine {
 
   handle(input: IInput): Promise<IOutput>;
 

@@ -3,9 +3,7 @@ import store from 'cache-manager-fs-hash'
 import express from 'express'
 import bodyParser from 'body-parser'
 import path from 'path'
-import { Status } from '../lib/contracts/IOutput'
-import Engine from '../lib/core/Engine'
-import { parseRequest, writeToResponse } from '../lib/utilities/http'
+import { Engine, Status, parseRequest, writeToResponse } from '../lib'
 import ExampleDotCom from './modules/ExampleDotCom'
 
 const cache = caching({

@@ -1,6 +1,6 @@
 import minimist from 'minimist'
-import IInput from '../contracts/IInput'
-import IOutput from '../contracts/IOutput'
+import { IInput } from '../contracts/IInput'
+import { IOutput } from '../contracts/IOutput'
 
 export function parseCommandLine (argv: string[]): IInput {
   if (argv.length < 3) {

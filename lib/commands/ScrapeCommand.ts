@@ -1,10 +1,10 @@
 import { Cache } from 'cache-manager'
 import Joi, { PartialSchemaMap } from 'joi'
-import IInput from '../contracts/IInput'
-import IOutput from '../contracts/IOutput'
-import Command from '../core/Command'
+import { IInput } from '../contracts/IInput'
+import { IOutput } from '../contracts/IOutput'
+import { Command } from '../core/Command'
 
-export default abstract class ScrapeCommand extends Command {
+export abstract class ScrapeCommand extends Command {
   cache?: Cache
 
   protected storeCookies = false

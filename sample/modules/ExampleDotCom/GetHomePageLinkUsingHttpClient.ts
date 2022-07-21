@@ -1,8 +1,6 @@
 import cheerio from 'cheerio'
 import Joi, { PartialSchemaMap } from 'joi'
-import IInput from '../../../lib/contracts/IInput'
-import IOutput, { Status } from '../../../lib/contracts/IOutput'
-import ScrapeUsingHttpClientCommand, { HttpClient } from '../../../lib/commands/ScrapeUsingHttpClientCommand'
+import { IInput, IOutput, Status, ScrapeUsingHttpClientCommand, HttpClient } from '../../../lib'
 
 export default class GetHomePageLinkUsingHttpClient extends ScrapeUsingHttpClientCommand {
   async handle (input: IInput, client: HttpClient): Promise<IOutput> {

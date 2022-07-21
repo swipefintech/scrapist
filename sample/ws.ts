@@ -3,9 +3,7 @@ import store from 'cache-manager-fs-hash'
 import { createServer } from 'http'
 import path from 'path'
 import { RawData, WebSocket, WebSocketServer } from 'ws'
-import { Status } from '../lib/contracts/IOutput'
-import Engine from '../lib/core/Engine'
-import { parseMessage } from '../lib/utilities/ws'
+import { Engine, Status, parseMessage } from '../lib'
 import ExampleDotCom from './modules/ExampleDotCom'
 
 const cache = caching({

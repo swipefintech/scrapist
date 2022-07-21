@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'http'
-import IInput from '../contracts/IInput'
-import IOutput, { Status } from '../contracts/IOutput'
+import { IInput } from '../contracts/IInput'
+import { IOutput, Status } from '../contracts/IOutput'
 
 export function parseRequest (req: IncomingMessage & { body: Record<string, unknown> }): IInput {
   const data = req.body || {}

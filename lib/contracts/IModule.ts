@@ -1,6 +1,6 @@
-import IEngine from './IEngine'
+import { IEngine } from './IEngine'
 
-export default interface IModule {
+export interface IModule {
 
   register(engine: IEngine): void;
 }

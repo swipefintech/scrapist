@@ -1,9 +1,7 @@
 import { caching } from 'cache-manager'
 import store from 'cache-manager-fs-hash'
 import path from 'path'
-import { Status } from '../lib/contracts/IOutput'
-import Engine from '../lib/core/Engine'
-import { parseCommandLine, writeToConsole } from '../lib/utilities/cli'
+import { Engine, Status, parseCommandLine, writeToConsole } from '../lib'
 import ExampleDotCom from './modules/ExampleDotCom'
 
 const cache = caching({

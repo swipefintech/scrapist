@@ -5,7 +5,7 @@ export enum Status {
   SUCCESS
 }
 
-export default interface IOutput {
+export interface IOutput {
   data?: unknown;
   status: Status;
   message?: string;

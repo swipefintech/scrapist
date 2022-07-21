@@ -1,5 +1,4 @@
-import IEngine from '../../../lib/contracts/IEngine'
-import IModule from '../../../lib/contracts/IModule'
+import { IEngine, IModule } from '../../../lib'
 import GetHomePageLinkUsingBrowser from './GetHomePageLinkUsingBrowser'
 import GetHomePageLinkUsingHttpClient from './GetHomePageLinkUsingHttpClient'
 

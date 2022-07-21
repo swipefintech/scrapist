@@ -47,7 +47,6 @@
   "main": "dist/index.js",
   "name": "@swipefintech/scrapist",
   "description": "Modular framework for building and scaling web scraping workloads over CLI, HTTP & WebSockets.",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/swipefintech/scrapist.git"
